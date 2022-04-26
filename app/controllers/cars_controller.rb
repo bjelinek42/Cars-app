@@ -5,9 +5,23 @@ class CarsController < ApplicationController
     render "cars/index"
   end
 
+  def new
+    render "cars/new"
+  end
+
   def show
     @car = Car.find(params[:id])
     render "cars/show"
   end
 
+  def create
+    car = Car.new(
+      make: params[:make],
+      model: params[:model],
+      year: params[:year],
+      price: params[:price]
+    )
+    car.save
+    redirect_to "/cars/#{car.id}"
+  end
 end

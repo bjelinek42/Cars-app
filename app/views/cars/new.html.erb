@@ -1,0 +1,11 @@
+<p>Create New Car</p>
+
+<form action="/cars" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>Make: <input type="text" name ="make"></p>
+  <p>Model: <input type="text" name ="model"></p>
+  <p>Year: <input type="text" name ="year"></p>
+  <p>Price: <input type="text" name ="price"></p>
+  <p><input type="submit"></p>
+
+</form>
