@@ -1,0 +1,8 @@
+<p>Hello there</p>
+
+<% @cars.each do |car|%>
+  <p><%= car.make %> <%= car.model %></p>
+  <a href="/cars/<%= car.id %>">More Info</a>
+
+
+<% end %>
